@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Project 2: Greendale Comminity Site
+        Author: Johny Yim
+        Date: 3/22/2024
+
+        filename: enroll.html
+    -->
+    <meta charset="utf-8">
+    <title>Greendale Community College</title>
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="Greendale_Logo.png" alt="Greendale Font">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">ADMIN & FACULTY</a></li>
+                <li><a href="#">NEWSLETTER</a></li>
+                <li><a href="#">ACADEMICS</a></li>
+                <li class="rightli" style="float:right"><a href="#"><u>ENROLL</u></a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <img id="bannerimage" src="Graduation_group.png" alt="Graduation">
+        </div>
+        <br>
+    </header>
+    
+    <form id="enroll" method="post">
+    <fieldset id="Leftside">
+        <legend>Application</legend>
+
+        <div class="formRow">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="street">Street address</label><br>
+        <input name="custStreet" id="street" type="text"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="city">City</label><br>
+        <input name="custCity" id="city" type="text"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="state">State</label><br>
+        <input name="custState" id="state" type="text" value="CO"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="zip">Postal code</label><br>
+        <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)"
+               pattern="^\d{5}(-\d{4})?$"><br>
+        </div>
+
+        <div class="formRow">
+        <label for="phone">Phone number</label><br>
+        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+               pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"><br>
+        </div>
+        
+        <div class="formRow">
+        <label for="mail">E-mail*</label><br>
+        <input name="custEmail" id="mail" type="email" required><br>
+        </div>       
+
+        <div class="formRow">
+        <label for="course">What courses are you interested in?</label><br>
+        <input name="course" id="course" type="text" list="courseType"><br>
+        <datalist id="courseType">
+            <option value="Acting">
+            <option value="Anthropology">
+            <option value="Art/Design">
+            <option value="Criminology">
+            <option value="Forensics">
+            <option value="Ice Cream">
+            <option value="Ladders">
+            <option value="Law">
+            <option value="Oceanography">
+            <option value="Political Science">
+            <option value="Space">
+            <option value="Spanish">
+        </datalist>
+        </div>
+
+        <div class="formRow">
+        <label for="dineSpin">How many years will you be attending?</label>
+            <input name="dineOut" id="dineSpin" type="number"
+                   value="1" step="1" min="0" max="10"><br>
+        </div>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset id="Rightside">
+        <legend>Enrollment Information</legend>
+
+        <div class="formRow">
+        <label for="visit">Date of Enrollment</label>
+        <input name="visitDate" id="visit" type="date"><br>
+        </div>
+
+        <div class="selection">
+        <p>Level of Mathematics completed:</p>
+            <input type="radio" id="Algebra1" name="Math" value="Algebra1">
+            <label for="Algebra1">Algebra 1</label><br>
+            <input type="radio" id="Geometry" name="Math" value="Geometry">
+            <label for="Geometry">Geometry</label><br>
+            <input type="radio" id="Trigonometry" name="Math" value="Trigonometry">
+            <label for="Trigonometry">Trigonometry</label><br>
+            <input type="radio" id="Algebra2" name="Math" value="Algebra2">
+            <label for="Algebra2">Algebra 2</label><br>
+        </div>
+
+        <div class="selection">
+        <p>Level of English completed:</p>
+            <input type="radio" id="Eng1" name="Eng1" value="Eng1">
+            <label for="Eng1">English 1</label><br>
+            <input type="radio" id="Eng2" name="Eng2" value="Eng2">
+            <label for="Eng2">English 2</label><br>
+            <input type="radio" id="Journalism" name="Journalism" value="Journalism">
+            <label for="Journalism">Journalism</label><br>
+            <input type="radio" id="EnglishAP" name="EnglishAP" value="EnglishAP">
+            <label for="EnglishAP">English AP</label><br>
+        </div>
+
+        <div class="formRow">
+        <label for="info">Clubs you may be interested in:<br>(select all that apply)
+        </label>
+            <select name="infoSrc" id="info" size="10" multiple>
+                <option value="av">A/V Club</option>
+                <option value="debate">Debate Team</option>
+                <option value="disco">Disco Club</option>
+                <option value="enviorment">Enviormental Club</option>
+                <option value="glee">Glee Club</option>
+                <option value="hat">Hat Club</option>
+                <option value="improv">Improv Now Club</option>
+                <option value="model">Model UN</option>
+                <option value="news">Student Newspaper</option>
+                <option value="trapeze">Trapeze Club</option>
+            </select>
+        </div>
+
+        <div class="selection">
+            <input name="mailMe" id="mailCB" value="yes" type="checkbox">
+                <label for="mailCB">Subscribe to Greendale Community Newsletter!
+                </label>
+        </div>
+
+    </fieldset>
+
+    <div id="buttons">
+        <input type="submit" value="Submit Application!">
+        <input type="reset" value="Cancel">
+    </div>
+
+    </form>
+</body>
+
+</html>
