@@ -61,7 +61,7 @@ img#bannerimage {
     display: block;
     width: 100%;
     position: relative;
-    opacity: 50%;
+    opacity: 100%;
 }
 
 .containter {
@@ -70,8 +70,8 @@ img#bannerimage {
 }
 
 .centered {
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -86,6 +86,7 @@ h1 {
     background-color: rgb(60, 83, 124);
     padding-left: 15px;
     color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .grid-container {
@@ -104,4 +105,85 @@ h1 {
 
 .newsimages {
     width: 100%;
+}
+
+/* Form Layout Styles */
+
+legend {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 5px;
+    font-size: large;
+    border-radius: 5px;
+}
+
+div.formRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0px;
+}
+
+div.formRow > * {
+    flex: 1 1 150px;
+}
+
+form#enroll {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+form#enroll > fieldset {
+    background-color: rgb(177, 200, 244);
+    flex: 1 1 300px;
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 10px;
+    border-style: solid;
+    border-width: medium;
+}
+
+/* Gallery */
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid rgb(60, 83, 124);
+    float: left;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 83, 124);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+  
+div.gallery:hover {
+    border: 1px solid #ffffff;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: justify;
+}
+
+div.desc b {
+    color: rgb(245, 192, 118);
+}
+
+/* Form Button Styles */
+
+div#buttons {
+    text-align: center;
+    width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 15px;
+    background-color: rgb(245, 192, 118);
+    border-radius: 100em;
 }
