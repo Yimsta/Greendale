@@ -5,8 +5,13 @@
 
 /* Grid Styles for Page */
 body {
-    display: grid;
+    
     background-color: rgb(102, 140, 210);
+    
+}
+
+body > index {
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "header"
                          "news1"
@@ -95,12 +100,18 @@ h1 {
     padding: 10px;
     text-align: justify;
     column-gap: 50px;
+    padding-left: 8%;
+    padding-bottom: 60px;
 }
 
 .grid-item {
     border: 1px;
     padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid-item:hover {
+    opacity: 70%;
 }
 
 .newsimages {
@@ -175,7 +186,7 @@ div.desc b {
 
 /* Form Button Styles */
 
-div#buttons {
+.buttons {
     text-align: center;
     width: 100%;
 }
@@ -186,4 +197,53 @@ input[type='submit'], input[type='reset'] {
     margin: 15px;
     background-color: rgb(245, 192, 118);
     border-radius: 100em;
+}
+
+/* About page */
+.bottom-page {
+    height: 30px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+}
+.founder-img {
+    display: inline-block;
+}
+
+.founder-img-box {
+    box-shadow: 0px 0px 4px black;
+}
+
+.facts {
+    background-color: rgb(177, 200, 244);
+    border-radius: 2px;
+    border-width: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+    box-shadow: 0px 0px 4px black;
+}
+
+/* Admin */
+.profile {
+    vertical-align: top;
+    display: inline-block;
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 70px;
+}
+
+.profile-image {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.profile-info {
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
 }
